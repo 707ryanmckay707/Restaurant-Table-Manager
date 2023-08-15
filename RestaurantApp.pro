@@ -11,7 +11,7 @@ CONFIG += c++11
 
 SOURCES += \
     Updaters/Updater.cpp \
-    Updaters/PartyUpdatermain.cpp \
+    Updaters/PartyUpdater.cpp \
     CalcRowAndColGlobalFunctions/CalcRowAndColGlobalFunctions.cpp \
     Database_Classes/DataBaseManagerObject.cpp \
     Database_Classes/Pair.cpp \
@@ -32,7 +32,7 @@ SOURCES += \
 
 HEADERS += \
     Updaters/Updater.cpp \
-    Updaters/PartyUpdatermain.cpp \
+    Updaters/PartyUpdater.cpp \
     CalcRowAndColGlobalFunctions/CalcRowAndColGlobalFunctions.h \
     Database_Classes/DataBaseManagerObject.hpp \
     Database_Classes/Pair.hpp \

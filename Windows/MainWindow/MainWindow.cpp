@@ -16,7 +16,7 @@
 #include "../../Windows/EditPartyDialog/EditPartyDialog.h"
 #include "../../Windows/SeatPartyDialog/SeatPartyDialog.h"
 #include "../../CalcRowAndColGlobalFunctions/CalcRowAndColGlobalFunctions.h"
-#include "../../Updaters/PartyUpdatermain.h"
+#include "../../Updaters/PartyUpdater.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -58,7 +58,7 @@ MainWindow::MainWindow(QWidget *parent)
     tableDMArray->fileDownload("http://localhost:3000/api/table/1");
 
     //Create the party database updater
-    partyUpdater = new PartyUpdatermain();
+    partyUpdater = new PartyUpdater();
 }
 
 MainWindow::~MainWindow()

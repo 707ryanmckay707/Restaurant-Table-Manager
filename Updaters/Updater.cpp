@@ -1,3 +1,5 @@
+// Created by Luke Shoulders
+
 #include "Updater.h"
 #include <QUrl>
 

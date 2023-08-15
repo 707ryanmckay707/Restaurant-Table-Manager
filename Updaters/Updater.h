@@ -1,4 +1,4 @@
-//Luke Shoulders
+// Created by Luke Shoulders
 
 #ifndef UPDATER_H
 #define UPDATER_H
