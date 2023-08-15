@@ -4,10 +4,10 @@
 
 #include "PartyUpdatermain.h"
 
-#include<QString>
-#include<QUrl>
-#include<QNetworkRequest>
-#include<QDebug>
+#include <QString>
+#include <QUrl>
+#include <QNetworkRequest>
+#include <QDebug>
 
 
 void PartyUpdatermain::updateName(int id, QString newName){

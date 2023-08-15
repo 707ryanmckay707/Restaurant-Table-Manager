@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     tableDMArray = new TableDMA();
     connect(tableDMArray, &TableDMA::ok, this, &MainWindow::databaseTableLoadSuccess);
-    tableDMArray->fileDownload("http://localhost:3000/api/table");
+    tableDMArray->fileDownload("http://localhost:3000/api/table/1");
 
     //Create the party database updater
     partyUpdater = new PartyUpdatermain();
@@ -240,12 +240,12 @@ void MainWindow::addPartyToWaitlist(Party* partyToAdd)
     connect(newPartyLayoutWidget, &PartyLayoutWidget::deleteButtonClicked, this, &MainWindow::deletePartyButtonClicked);
 }
 
-    //The bool var "deleteParty" determines whether to actually delete the party or not
-    //Set it to false when calling the function after moving a party to a table.
+    // The bool var "deleteParty" determines whether to actually delete the party or not
+    // Set it to false when calling the function after moving a party to a table.
     //      The above option simply deletes all references to the party.
-    //Set it to true when calling the function to delete party as a whole.
+    // Set it to true when calling the function to delete party as a whole.
     //
-    //In either case, the function deletes the passed PartyLayoutWidget
+    // In either case, the function deletes the passed PartyLayoutWidget
 void MainWindow::removePartyFromWaitlist(PartyLayoutWidget* partyLayoutWidgetToDelete, bool deleteParty)
 {
 

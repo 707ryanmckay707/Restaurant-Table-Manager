@@ -1,4 +1,7 @@
 // Created by Nicole Taketa and Luke Shoulders
+// Updated by Ryan McKay
+// - Removed hardcoded rest_id assignment from tables route
+//   and used added restid param
 
 const chpConnection = require('../CHPconnection');
 
@@ -9,19 +12,20 @@ class TableController {
     }
 
     // Fetches all tables
-    async Tables(ctx, next) {// Created by Luke Shoulders
+    async tables(ctx, next) {// Created by Luke Shoulders
         console.log('Controller HIT: tableController::tables');
         return new Promise((resolve, reject) => {
-            const query = `select nbr, t.\`status\`, p_name, p.p_id, p_size
-                            from \`table\` t 
+            chpConnection.query({
+                    sql: `select nbr, t.\`status\`, p_name, p.p_id, p_size
+                            from \`table\` t
                             LEFT JOIN party p ON p.p_id = t.p_id
-                            where t.rest_id = 1
-                            ORDER BY nbr;`;
-
-            chpConnection.query(query, (err, res) => {
-                if (err) {
-                    reject(`Error querying CHP.test: ${err}`);
-                }
+                            where t.rest_id = ?
+                            ORDER BY nbr`,
+                    values: [ctx.params.restid]
+                }, (err, res) => {
+                    if (err) {
+                        reject(`Error querying CHP.test: ${err}`);
+                    }
 
                 ctx.body = res;
                 ctx.status = 200;
