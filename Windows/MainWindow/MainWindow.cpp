@@ -1,4 +1,4 @@
-//Created by Ryan McKay
+// Created by Ryan McKay
 
 #include "MainWindow.h"
 #include "../../TableStatusEnum/TableStatusEnum.h"

@@ -1,4 +1,4 @@
-//Luke Shoulders
+// Created by Luke Shoulders
 
 #ifndef DATABASEMANAGERARRAYQ_H
 #define DATABASEMANAGERARRAYQ_H

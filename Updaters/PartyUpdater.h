@@ -1,6 +1,4 @@
-//
 // Created by Jorge Calderon
-//
 
 #ifndef PARTYUPDATERMAIN_H
 #define PARTYUPDATERMAIN_H

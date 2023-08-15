@@ -1,6 +1,4 @@
-//
 // Created by Jorge Calderon
-//
 
 #ifndef PartyDMA_HPP
 #define PartyDMA_HPP

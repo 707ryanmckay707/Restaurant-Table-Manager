@@ -1,4 +1,4 @@
-//Created by Ryan McKay
+// Created by Ryan McKay
 
 #ifndef GLOBALFUNCTIONS_H
 #define GLOBALFUNCTIONS_H

@@ -4,7 +4,8 @@
 #include <QUrl>
 
 Updater::Updater(QObject *parent)
-    :QObject(parent){
+    : QObject(parent)
+{
     manager = new QNetworkAccessManager(this);
     connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(replyFinished(QNetworkReply*)));
 }

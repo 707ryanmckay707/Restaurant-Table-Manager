@@ -1,6 +1,5 @@
-//
 // Created by Nicole Taketa
-//
+
 #include <fstream>
 #include "TableDMA.hpp"
 

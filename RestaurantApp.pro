@@ -10,6 +10,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Updaters/TableUpdater.cpp \
     Updaters/Updater.cpp \
     Updaters/PartyUpdater.cpp \
     CalcRowAndColGlobalFunctions/CalcRowAndColGlobalFunctions.cpp \
@@ -31,6 +32,7 @@ SOURCES += \
     main.cpp
 
 HEADERS += \
+    Updaters/TableUpdater.h \
     Updaters/Updater.cpp \
     Updaters/PartyUpdater.cpp \
     CalcRowAndColGlobalFunctions/CalcRowAndColGlobalFunctions.h \

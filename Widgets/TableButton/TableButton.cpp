@@ -1,4 +1,4 @@
-//Created by Ryan McKay
+// Created by Ryan McKay
 
 #include "TableButton.h"
 #include "../../TableStatusEnum/TableStatusEnumGlobalFunctions.h"

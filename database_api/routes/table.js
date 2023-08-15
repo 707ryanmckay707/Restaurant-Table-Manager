@@ -1,6 +1,6 @@
-// Created by Nicole Taketa and Luke Shoulders
+// Created by Luke Shoulders and Nicole Taketa
 // Updated by Ryan McKay
-// - Added restid param to Tables routed
+// - Added restid param to Tables route
 
 const TableController = require('../controllers/tableController.js');
 

@@ -1,4 +1,4 @@
-//Luke Shoulders
+// Created by Luke Shoulders
 
 #ifndef DATABASEMANAGEROBJECT_HPP
 #define DATABASEMANAGEROBJECT_HPP

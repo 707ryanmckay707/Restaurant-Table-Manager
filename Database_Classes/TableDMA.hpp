@@ -1,6 +1,4 @@
-//
 // Created by Nicole Taketa
-//
 
 #ifndef CS370_TableDMA_HPP
 #define CS370_TableDMA_HPP

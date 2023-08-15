@@ -1,4 +1,4 @@
-//Created by Ryan McKay
+// Created by Ryan McKay
 
 #ifndef PARTYLAYOUTWIDGET_H
 #define PARTYLAYOUTWIDGET_H

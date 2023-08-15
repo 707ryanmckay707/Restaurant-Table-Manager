@@ -1,5 +1,5 @@
 // Created by Matthew Coady
-// Also created the seatparty.ui file
+// (seatparty.ui also created by Matthew Coady)
 
 #include "SeatPartyDialog.h"
 #include "ui_SeatPartyDialog.h"

@@ -1,6 +1,4 @@
-//
 // Created by Nicole Taketa
-//
 
 #include "TableDMO.hpp"
 #include "PartyDMO.hpp"

@@ -1,4 +1,4 @@
-//Created by Ryan McKay
+// Created by Ryan McKay
 
 #ifndef TABLESTATUS_H
 #define TABLESTATUS_H

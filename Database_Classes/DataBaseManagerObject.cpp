@@ -1,4 +1,4 @@
-//Luke Shoulders
+// Created by Luke Shoulders
 
 #include "DataBaseManagerObject.hpp"
 #include<iostream>

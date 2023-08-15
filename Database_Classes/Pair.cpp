@@ -1,4 +1,4 @@
-//Luke Shoulders
+// Created by Luke Shoulders
 
 #include "Pair.hpp"
 

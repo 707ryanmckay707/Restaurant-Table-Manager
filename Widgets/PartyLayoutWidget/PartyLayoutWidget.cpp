@@ -1,4 +1,4 @@
-//Created by Ryan McKay
+// Created by Ryan McKay
 
 #include "PartyLayoutWidget.h"
 #include "../../Windows/EditPartyDialog/EditPartyDialog.h"
@@ -59,7 +59,7 @@ void PartyLayoutWidget::updateParty(QString newName, int newSize)
 
 PartyLayoutWidget::~PartyLayoutWidget()
 {
-    if(party)
+    if (party)
     {
         delete party;
         party = 0;

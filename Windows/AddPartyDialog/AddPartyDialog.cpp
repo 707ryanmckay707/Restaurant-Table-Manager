@@ -1,5 +1,5 @@
 // Created by Matthew Coady
-// Also created the addpartydialog.ui file
+// (addpartydialog.ui also created by Matthew Coady)
 
 #include "AddPartyDialog.h"
 #include "ui_AddPartyDialog.h"

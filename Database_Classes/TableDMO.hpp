@@ -1,6 +1,4 @@
-//
 // Created by Nicole Taketa
-//
 
 #ifndef CS370_TableDMO_HPP
 #define CS370_TableDMO_HPP

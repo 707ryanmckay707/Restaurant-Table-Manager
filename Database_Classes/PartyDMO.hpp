@@ -1,6 +1,4 @@
-//
 // Created by Jorge Calderon
-//
 
 #ifndef TABLE_PARTY_WAITLIST_PARTY_HPP
 #define TABLE_PARTY_WAITLIST_PARTY_HPP

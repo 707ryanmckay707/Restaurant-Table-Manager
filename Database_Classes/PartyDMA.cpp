@@ -1,6 +1,4 @@
-//
 // Created by Jorge Calderon
-//
 
 #include <fstream>
 #include <cstdio>

@@ -1,4 +1,4 @@
-//Luke Shoulders
+// Created by Luke Shoulders
 
 #include <QUrl>
 #include "databasemanagerarrayq.h"
@@ -7,12 +7,14 @@
 #include <iostream>
 
 DataBaseManagerArrayQ::DataBaseManagerArrayQ(QObject *parent)
-    :QObject(parent){
+    : QObject(parent)
+{
     _listOfDataObjects = new std::vector<DataBaseManagerObject *>;
     manager = new QNetworkAccessManager();
 }
 
-DataBaseManagerArrayQ::~DataBaseManagerArrayQ(){
+DataBaseManagerArrayQ::~DataBaseManagerArrayQ()
+{
     while(!listOfDataObjects()->empty()){
         delete listOfDataObjects()->back();
         listOfDataObjects()->pop_back();
@@ -38,14 +40,16 @@ void DataBaseManagerArrayQ::replyFinished(QNetworkReply *reply)
         emit failure(reply->errorString());
 }
 
-void DataBaseManagerArrayQ::fileDownload(QString urlPath){
+void DataBaseManagerArrayQ::fileDownload(QString urlPath)
+{
     connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(replyFinished(QNetworkReply*)));
 
     QUrl qrl(urlPath);
     manager->get(QNetworkRequest(qrl));
 }
 
-void DataBaseManagerArrayQ::parseJSONArray(std::fstream &stream) {
+void DataBaseManagerArrayQ::parseJSONArray(std::fstream &stream)
+{
     char c;
     stream >> c;
 
@@ -75,6 +79,7 @@ void DataBaseManagerArrayQ::parseJSONArray(std::fstream &stream) {
     }
 }
 
-void DataBaseManagerArrayQ::setFilePath(QString _filePath){
+void DataBaseManagerArrayQ::setFilePath(QString _filePath)
+{
     filePath = _filePath;
 }
