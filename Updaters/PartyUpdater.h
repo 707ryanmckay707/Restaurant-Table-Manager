@@ -5,9 +5,9 @@
 #ifndef PARTYUPDATERMAIN_H
 #define PARTYUPDATERMAIN_H
 
-#include<iostream>
-#include"Updater.h"
-#include<QString>
+#include <iostream>
+#include "Updater.h"
+#include <QString>
 
 
 class PartyUpdatermain : public Updater {
