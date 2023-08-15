@@ -10,9 +10,9 @@
 #include <QString>
 
 
-class PartyUpdatermain : public Updater {
+class PartyUpdater : public Updater {
 public:
-    PartyUpdatermain();
+    PartyUpdater();
     void updateName(int id, QString newName);
     void updateSize(int id, int newSize);
     void updateNameAndSize(int id, QString newName, int newSize);
