@@ -148,6 +148,7 @@ void MainWindow::on_addToWaitlistButton_clicked()
     {
         Party* newParty = new Party(newPartyName, newPartySize, lifeTimeNumOfParties);
         addPartyToWaitlist(newParty);
+        partyUpdater->addParty(newPartyName, newPartySize);
         ++lifeTimeNumOfParties;
     }
 }
@@ -206,7 +207,8 @@ void MainWindow::sitPartyButtonClicked(PartyLayoutWidget* partyLayoutWidgetToEdi
 
 void MainWindow::deletePartyButtonClicked(PartyLayoutWidget* partyLayoutWidgetToEdit)
 {
-    partyUpdater->deleteParty(partyLayoutWidgetToEdit->getParty()->getID());
+    int partyID = partyLayoutWidgetToEdit->getParty()->getID();
+    partyUpdater->deleteParty(partyID);
     removePartyFromWaitlist(partyLayoutWidgetToEdit, true);
 }
 

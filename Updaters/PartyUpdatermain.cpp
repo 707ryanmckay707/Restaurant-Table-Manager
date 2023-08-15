@@ -53,9 +53,8 @@ void PartyUpdatermain::sitParty(int id, int tableNum){
     QUrl qrl(url);
     manager->get(QNetworkRequest(qrl));
 }
+
 PartyUpdatermain::PartyUpdatermain()
 {
 
 }
-
-// QString sizeAsQStringQ = QString::number(size)
