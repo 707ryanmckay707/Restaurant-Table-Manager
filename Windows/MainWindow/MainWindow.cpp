@@ -17,6 +17,7 @@
 #include "../../Windows/SeatPartyDialog/SeatPartyDialog.h"
 #include "../../CalcRowAndColGlobalFunctions/CalcRowAndColGlobalFunctions.h"
 #include "../../Updaters/PartyUpdater.h"
+#include "../../Updaters/TableUpdater.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,12 +29,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     setWindowTitle("Restaurant Table and Waitlist Manager");
 
-    //This buttons are currently unused, but keeps the ui layout ratio we want
+    // This buttons are currently unused, but keeps the ui layout ratio we want
     ui->previousFloormapButton->setVisible(false);
     ui->nextFloormapButton->setVisible(false);
     ui->FloomapsComboBox->setVisible(false);
 
-    //Creates the collection of tables in floormap, all are set to DNE
+    // Creates the collection of tables in floormap, all are set to DNE
     int tableNum = 1;
     for(int xIdx = 0; xIdx < FLOORMAP_WIDTH; ++xIdx)
     {
@@ -48,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent)
         floormap.push_back(newRow);
     }
 
-    //loading the parties, stored on the waitlist, from the database
+    // loading the parties, stored on the waitlist, from the database
     partyDMArray = new PartyDMA();
     connect(partyDMArray, &PartyDMA::ok, this, &MainWindow::databasePartyLoadSuccess);
     partyDMArray->fileDownload("http://localhost:3000/api/party/1");
@@ -57,8 +58,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(tableDMArray, &TableDMA::ok, this, &MainWindow::databaseTableLoadSuccess);
     tableDMArray->fileDownload("http://localhost:3000/api/table/1");
 
-    //Create the party database updater
+    // Create the party and database updaters
     partyUpdater = new PartyUpdater();
+    tableUpdater = new TableUpdater();
 }
 
 MainWindow::~MainWindow()

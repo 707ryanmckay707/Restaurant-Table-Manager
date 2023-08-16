@@ -9,12 +9,15 @@ TableButton::TableButton(int inTableNum)
 {
     setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     setMinimumSize(50, 50);
+
+    setText("+");
+    setFlat(true);
+
     tableNum = inTableNum;
     tableStatus = TableStatus::DNE;
     party = nullptr;
+
     connect(this, &TableButton::clicked, this, &TableButton::onClicked);
-    setText("+");
-    setFlat(true);
 }
 
 void TableButton::setOpenFromDNE()
@@ -53,7 +56,7 @@ void TableButton::onClicked()
         break;
     case TableStatus::OPEN:
         {
-            //set to DNE
+            // set to DNE
             tableStatus = TableStatus::DNE;
             setFlat(true);
             setText("+");
@@ -61,7 +64,7 @@ void TableButton::onClicked()
         break;
     case TableStatus::SEATED:
         {
-            //set to OPEN
+            // set to OPEN
             delete party;
             party = nullptr;
             tableStatus = TableStatus::OPEN;
@@ -71,6 +74,8 @@ void TableButton::onClicked()
         }
         break;
     }
+
+
 }
 
 void TableButton::deleteTable()

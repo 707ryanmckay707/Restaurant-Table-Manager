@@ -14,6 +14,7 @@
 #include "../../Database_Classes/PartyDMA.hpp"
 #include "../../Database_Classes/TableDMA.hpp"
 #include "../../Updaters/PartyUpdater.h"
+#include "../../Updaters/TableUpdater.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -56,6 +57,7 @@ private:
 
     //Databse Updaters
     PartyUpdater* partyUpdater = nullptr;
+    TableUpdater* tableUpdater = nullptr;
 
     std::vector<std::vector<TableButton*>> floormap;
 

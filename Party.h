@@ -1,4 +1,4 @@
-//Created by Ryan McKay
+// Created by Ryan McKay
 
 #ifndef PARTY_H
 #define PARTY_H

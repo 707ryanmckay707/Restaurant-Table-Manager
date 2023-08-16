@@ -11,7 +11,6 @@ CONFIG += c++11
 
 SOURCES += \
     Updaters/TableUpdater.cpp \
-    Updaters/Updater.cpp \
     Updaters/PartyUpdater.cpp \
     CalcRowAndColGlobalFunctions/CalcRowAndColGlobalFunctions.cpp \
     Database_Classes/DataBaseManagerObject.cpp \

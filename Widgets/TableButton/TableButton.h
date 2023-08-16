@@ -20,6 +20,8 @@ public:
     ~TableButton();
 public slots:
     void onClicked();
+signals:
+    void tableStatusChanged(TableStatus oldStatus, TableStatus newStatus);
 private:
     Party* party;
     int tableNum;

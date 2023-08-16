@@ -1,7 +1,4 @@
 #include "Windows\MainWindow\MainWindow.h"
-#include "Database_Classes/TableDMA.hpp"
-#include "Database_Classes/PartyDMA.hpp"
-
 #include <QApplication>
 
 int main(int argc, char *argv[])
