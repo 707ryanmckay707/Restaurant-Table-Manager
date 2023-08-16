@@ -11,6 +11,7 @@ class TableUpdater : public Updater
 public:
     explicit TableUpdater(QObject *parent = nullptr);
     void updateTableStatus(int restId, int tableNumber, TableStatus tableStatus);
+    void updateTableStatusAndRemoveParty(int restId, int tableNumber, TableStatus tableStatus, int partyID);
 };
 
 #endif // TABLEUPDATER_H

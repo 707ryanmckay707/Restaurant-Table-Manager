@@ -23,3 +23,15 @@ void TableUpdater::updateTableStatus(int restId, int tableNumber, TableStatus ta
     QUrl qUrl(url);
     manager->get(QNetworkRequest(qUrl));
 }
+
+void TableUpdater::updateTableStatusAndRemoveParty(int restId, int tableNumber, TableStatus tableStatus, int partyID)
+{
+    QString url = "http://localhost:3000/api/table/"
+                  + QString::number(restId) + "/"
+                  + QString::number(tableNumber) + "/"
+                  + getTableStatusQString(tableStatus)
+                  + QString::number(partyID) + "/"
+                  + "/updatestatusremoveparty";
+    QUrl qUrl(url);
+    manager->get(QNetworkRequest(qUrl));
+}

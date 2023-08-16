@@ -2,6 +2,7 @@
 // Updated by Ryan McKay
 // - Removed hardcoded rest_id assignment from tables route
 //   and used added restid param
+// - Added the updateTableStatusAndRemoveParty function
 
 const chpConnection = require('../CHPconnection');
 
@@ -12,7 +13,7 @@ class TableController {
     }
 
     // Fetches all tables
-    async tables(ctx, next) {// Created by Luke Shoulders
+    async tables(ctx, next) { // Created by Luke Shoulders updated by Ryan McKay
         console.log('Controller HIT: tableController::tables');
         return new Promise((resolve, reject) => {
             chpConnection.query({
@@ -41,7 +42,7 @@ class TableController {
     }
 
     // adds a new table
-    async addTable(ctx, next) {// Created by Luke Shoulders
+    async addTable(ctx, next) { // Created by Luke Shoulders
         console.log('Controller HIT: tableController::addTable')
         return new Promise((resolve, reject) => {
             chpConnection.query({
@@ -89,12 +90,34 @@ class TableController {
             });
     }
 
-    async updateTableStatus(ctx, next){// Created by Nicole Taketa
+    async updateTableStatus(ctx, next){ // Created by Nicole Taketa
         console.log('ControllerHIT: tableController::updateTableStatus')
         return new Promise((resolve, reject) => {
                 chpConnection.query({
                         sql: 'call proc_update_table_status( ?, ?, ?);',
                         values: [ctx.params.id, ctx.params.nbr, ctx.params.status]
+                }, (err, res) => {
+                        if(err) {
+                                reject('Error querying CHP.test: ${err}');
+                        }
+                        ctx.body = res;
+                        ctx.status = 200;
+                        resolve();
+                });
+        })
+        .then(await next)
+        .catch (err => {
+                ctx.status = 500;
+                ctx.body = err;
+        });
+    }
+
+    async updateTableStatusAndRemoveParty(ctx, next){ // Created by Ryan McKay
+        console.log('ControllerHIT: tableController::updateTableStatusAndRemoveParty')
+        return new Promise((resolve, reject) => {
+                chpConnection.query({
+                        sql: 'call proc_update_table_status_and_remove_party( ?, ?, ?, ?);',
+                        values: [ctx.params.id, ctx.params.nbr, ctx.params.status, ctx.params.pid]
                 }, (err, res) => {
                         if(err) {
                                 reject('Error querying CHP.test: ${err}');
